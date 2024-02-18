@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId("user_id")->constrained("users");
             $table->foreignId("transaction_type_id")->constrained("transcations_type");
             $table->foreignId("payment_method_id")->constrained("payment_method");
-            $table->foreignId("product_id")->nullable()->constrained("producst");
+            $table->foreignId("product_id")->nullable()->constrained("products");
             $table->float("amount", 10, 2);
             $table->string("transaction_code");
             $table->text("description")->nullable();
