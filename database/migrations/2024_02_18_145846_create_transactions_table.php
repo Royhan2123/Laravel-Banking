@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('transaction', function (Blueprint $table) {
+        Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->foreignId("user_id")->constrained("users");
-            $table->foreignId("transaction_type_id")->constrained("transaction_types");
-            $table->foreignId("payment_method_id")->constrained("payment_methods");
-            $table->foreignId("product_id")->nullable()->constrained("products");
+            $table->foreignId("transaction_type_id")->constrained("transcations_type");
+            $table->foreignId("payment_method_id")->constrained("payment_method");
+            $table->foreignId("product_id")->nullable()->constrained("producst");
             $table->float("amount", 10, 2);
             $table->string("transaction_code");
             $table->text("description")->nullable();
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('transaction');
+        Schema::dropIfExists('transactions');
     }
 };
