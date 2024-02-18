@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('operator_cards', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
+            $table->enum("status",["active","inactive"]);
+            $table->string("thumbnail");
             $table->timestamps();
         });
     }
