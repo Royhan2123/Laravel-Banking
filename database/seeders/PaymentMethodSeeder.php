@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class PaymentMethodSeeder extends Seeder
 {
@@ -12,6 +12,35 @@ class PaymentMethodSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        DB::table("payment_methods") -> insert([
+            [
+                "name" => "Bank BWA",
+                "code" => "bwa",
+                'status' => 'active',
+                "created_at" => now(),
+                'update_at' => now()
+            ],
+            [
+                "name" => "Bank BNI",
+                "code" => "bni_va",
+                'status' => 'active',
+                "created_at" => now(),
+                'update_at' => now()
+            ],
+            [
+                "name" => "Bank BCA",
+                "code" => "bca_va",
+                'status' => 'active',
+                "created_at" => now(),
+                'update_at' => now()
+            ],
+            [
+                "name" => "Bank BRI",
+                "code" => "bri_va",
+                'status' => 'active',
+                "created_at" => now(),
+                'update_at' => now()
+            ],
+        ]);
     }
 }
