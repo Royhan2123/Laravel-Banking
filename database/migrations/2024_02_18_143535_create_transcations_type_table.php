@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('transcations_type', function (Blueprint $table) {
+        Schema::create('transcations_types', function (Blueprint $table) {
             $table->id();
             $table->string("name");
             $table->string("code");
@@ -27,7 +27,7 @@ return new class extends Migration
      * Reverse the migrations.
      */
     public function down(): void
-    {
-        Schema::dropIfExists('transcations_type');
-    }
+{
+    Schema::dropIfExists('transactions_types');
+}
 };
