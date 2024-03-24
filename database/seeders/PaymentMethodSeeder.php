@@ -18,28 +18,28 @@ class PaymentMethodSeeder extends Seeder
                 "code" => "bwa",
                 'status' => 'active',
                 "created_at" => now(),
-                'update_at' => now()
+                'updated_at' => now()
             ],
             [
                 "name" => "Bank BNI",
                 "code" => "bni_va",
                 'status' => 'active',
                 "created_at" => now(),
-                'update_at' => now()
+                'updated_at' => now()
             ],
             [
                 "name" => "Bank BCA",
                 "code" => "bca_va",
                 'status' => 'active',
                 "created_at" => now(),
-                'update_at' => now()
+                'updated_at' => now()
             ],
             [
                 "name" => "Bank BRI",
                 "code" => "bri_va",
                 'status' => 'active',
                 "created_at" => now(),
-                'update_at' => now()
+                'updated_at' => now()
             ],
         ]);
     }
